@@ -3,7 +3,7 @@ defmodule Permutations do
     a = str1 |> String.graphemes
     b = str2 |> String.graphemes
 
-    IO.inspect compare(a, b)
+    compare(a, b)
   end
 
   def compare([], []), do: true
@@ -28,6 +28,8 @@ defmodule Permutations do
   end
 end
 
-Permutations.equal("john", "nohj")
-Permutations.equal("john", "ohj")
-Permutations.equal("john", "ohjjn")
+if Permutations.equal("john", "nohj") && !Permutations.equal("john", "ohj") && !Permutations.equal("john", "ohjjn") do
+  IO.inspect "It works"
+else
+  IO.inspect "Something is broken"
+end
