@@ -28,7 +28,7 @@ defmodule Permutations do
   end
 end
 
-if Permutations.equal("john", "nohj") && !Permutations.equal("john", "ohj") && !Permutations.equal("john", "ohjjn") do
+if Permutations.equal("john", "nohj") && !Permutations.equal("john", "ohj") && !Permutations.equal("john", "ohjjn") && Permutations.equal("johnn", "nnohj") do
   IO.inspect "It works"
 else
   IO.inspect "Something is broken"
